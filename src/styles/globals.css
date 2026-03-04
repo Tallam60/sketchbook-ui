@@ -1,0 +1,1128 @@
+/* Sketch Button Styles */
+.sketch-button {
+  position: relative;
+  background: transparent;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.sketch-button:hover {
+  transform: translate(-2px, -2px) rotate(-1.5deg);
+  filter: drop-shadow(4px 5px 0px rgba(0,0,0,0.15)) drop-shadow(6px 8px 10px rgba(0,0,0,0.1)) saturate(1.1);
+}
+
+.sketch-button:not(:hover) {
+  transform: rotate(-0.8deg);
+  filter: drop-shadow(2px 3px 0px rgba(0,0,0,0.12)) drop-shadow(4px 6px 8px rgba(0,0,0,0.08));
+}
+
+.sketch-button:focus {
+  outline: none;
+}
+
+.sketch-button svg {
+  display: block;
+}
+
+.sketch-button-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  font-family: 'Caveat', cursive;
+  font-size: 1.75rem;
+  color: #2a2a2a;
+  padding-top: 4px;
+  transition: transform 0.3s ease;
+}
+
+.sketch-button:hover .sketch-button-text {
+  transform: scale(1.02);
+}
+
+.sketch-button-underline {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.sketch-button:hover .sketch-button-underline {
+  opacity: 0.7;
+}
+
+/* Size variants */
+.sketch-button-sm {
+  font-size: 1.25rem;
+}
+
+.sketch-button-sm svg {
+  width: 160px;
+  height: 65px;
+}
+
+.sketch-button-md {
+  font-size: 1.75rem;
+}
+
+.sketch-button-md svg {
+  width: 220px;
+  height: 90px;
+}
+
+.sketch-button-lg {
+  font-size: 2.25rem;
+}
+
+.sketch-button-lg svg {
+  width: 280px;
+  height: 110px;
+}
+
+/* Sketch Input Styles */
+.sketch-input-container {
+  display: block;
+  position: relative;
+  width: fit-content;
+}
+
+.sketch-input-field {
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.sketch-input-field::placeholder {
+  color: rgba(42, 42, 42, 0.5);
+  font-style: italic;
+}
+
+.sketch-input-field:disabled::placeholder {
+  color: rgba(153, 153, 153, 0.5);
+}
+
+/* Sketch Checkbox Styles */
+.sketch-checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.75rem;
+}
+
+.sketch-checkbox:disabled {
+  cursor: not-allowed;
+}
+
+/* Screen reader only class for accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Sketch Radio Styles */
+.sketch-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sketch-radio {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.75rem;
+}
+
+.sketch-radio:disabled {
+  cursor: not-allowed;
+}
+
+/* Sketch Switch Styles */
+.sketch-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.75rem;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sketch-switch:disabled {
+  cursor: not-allowed;
+}
+
+/* Sketch Select Styles */
+.sketch-select {
+  position: relative;
+  display: inline-block;
+}
+
+.sketch-select-trigger {
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.sketch-select-trigger:disabled {
+  cursor: not-allowed;
+}
+
+.sketch-select-trigger:focus {
+  outline: none;
+}
+
+.sketch-select-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  pointer-events: none;
+  font-family: 'Caveat', cursive;
+  color: #2a2a2a;
+}
+
+.sketch-select-dropdown {
+  position: absolute;
+  z-index: 50;
+  margin-top: 4px;
+  animation: dropdownAppear 0.3s ease;
+}
+
+.sketch-select-option {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: 'Caveat', cursive;
+  color: #2a2a2a;
+  transition: transform 0.2s ease;
+}
+
+.sketch-select-option:hover {
+  transform: translateX(3px);
+}
+
+.sketch-select-checkmark {
+  margin-left: auto;
+  opacity: 0.6;
+}
+
+/* Dropdown animation */
+@keyframes dropdownAppear {
+  from {
+    opacity: 0;
+    transform: rotate(-0.2deg) translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-0.2deg) translateY(0);
+  }
+}
+
+/* Sketch Accordion Styles */
+.sketch-accordion {
+  width: 100%;
+}
+
+.sketch-accordion-item {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.sketch-accordion-header {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.sketch-accordion-header-svg {
+  display: block;
+}
+
+.sketch-accordion-header-content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  pointer-events: none;
+}
+
+.sketch-accordion-title-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sketch-accordion-number {
+  font-size: 1.4rem;
+  font-weight: 600;
+  opacity: 0.6;
+}
+
+.sketch-accordion-title {
+  padding-top: 3px;
+}
+
+.sketch-accordion-arrow {
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.sketch-accordion-content-wrapper {
+  margin-top: -4px;
+}
+
+.sketch-accordion-content {
+  position: relative;
+}
+
+.sketch-accordion-content-svg {
+  display: block;
+  min-height: 100px;
+}
+
+.sketch-accordion-content-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 24px 24px 55px;
+  font-family: 'Caveat', cursive;
+  font-size: 1.25rem;
+  color: #3a3a3a;
+  line-height: 1.8;
+}
+
+/* Sketch Badge Styles */
+.sketch-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.25s ease;
+}
+
+.sketch-badge-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  font-family: 'Caveat', cursive;
+  white-space: nowrap;
+  padding-top: 2px;
+  font-weight: 600;
+}
+
+/* Sketch Toast Styles */
+.sketch-toast {
+  position: relative;
+  display: inline-block;
+  transform: rotate(-0.8deg);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  animation: toastSlideIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sketch-toast:hover {
+  transform: rotate(-0.3deg) translate(-1px, -1px);
+}
+
+.sketch-toast-dismissing {
+  animation: toastSlideOut 0.4s ease forwards;
+  pointer-events: none;
+}
+
+.sketch-toast-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 24px;
+  pointer-events: none;
+}
+
+.sketch-toast-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.sketch-toast-message {
+  flex: 1;
+  font-family: 'Caveat', cursive;
+  color: #2a2a2a;
+  line-height: 1.4;
+  pointer-events: none;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  white-space: pre-wrap;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.sketch-toast-message p {
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+
+.sketch-toast-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  pointer-events: auto;
+  border-radius: 4px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sketch-toast-close:hover {
+  transform: rotate(15deg) scale(1.1);
+  opacity: 0.8;
+}
+
+.sketch-toast-close:active {
+  transform: rotate(15deg) scale(0.95);
+}
+
+.sketch-toast-close:focus {
+  outline: 2px solid #2a2a2a;
+  outline-offset: 2px;
+}
+
+.sketch-toast-container {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+  pointer-events: none;
+}
+
+.sketch-toast-container .sketch-toast {
+  pointer-events: auto;
+}
+
+/* Toast animations */
+@keyframes toastSlideIn {
+  from {
+    opacity: 0;
+    transform: rotate(-0.8deg) translateX(100%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-0.8deg) translateX(0) scale(1);
+  }
+}
+
+@keyframes toastSlideOut {
+  from {
+    opacity: 1;
+    transform: rotate(-0.8deg) translateX(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(-0.8deg) translateX(100%) scale(0.8);
+  }
+}
+
+/* Toast bounce animation for emphasis */
+@keyframes toastBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: rotate(-0.8deg) translateY(0);
+  }
+  40% {
+    transform: rotate(-0.8deg) translateY(-10px);
+  }
+  60% {
+    transform: rotate(-0.8deg) translateY(-5px);
+  }
+}
+
+
+/* Sketch Dropdown Styles */
+.sketch-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.sketch-dropdown-trigger {
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.sketch-dropdown-trigger:disabled {
+  cursor: not-allowed;
+}
+
+.sketch-dropdown-trigger:focus {
+  outline: none;
+}
+
+.sketch-dropdown-panel {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 50;
+  margin-top: 8px;
+  animation: dropdownMenuAppear 0.3s ease;
+}
+
+.sketch-dropdown-item {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Caveat', cursive;
+  height: 52px;
+  padding: 14px 20px;
+  transition: transform 0.2s ease;
+}
+
+.sketch-dropdown-item:hover {
+  transform: translateX(4px);
+}
+
+.sketch-dropdown-item-icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sketch-dropdown-item-checkmark {
+  margin-left: auto;
+  opacity: 0.5;
+  width: 16px;
+  height: 16px;
+}
+
+/* Dropdown menu animation */
+@keyframes dropdownMenuAppear {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) rotate(0.5deg) translateY(-10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) rotate(0.5deg) translateY(0) scale(1);
+  }
+}
+
+/* Sketch Avatar Styles */
+.sketch-avatar {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sketch-avatar:hover {
+  transform: translate(-1px, -1px) rotate(-1deg) !important;
+}
+
+.sketch-avatar.cursor-pointer {
+  cursor: pointer;
+}
+
+.sketch-avatar.cursor-pointer:hover {
+  filter: drop-shadow(3px 4px 0px rgba(0,0,0,0.12)) drop-shadow(4px 6px 8px rgba(0,0,0,0.1)) !important;
+}
+
+.sketch-avatar.cursor-pointer:active {
+  transform: translate(0px, 0px) rotate(0deg) scale(0.98) !important;
+  transition: transform 0.1s ease;
+}
+
+/* Avatar glow animation */
+@keyframes avatarGlow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.15;
+  }
+}
+
+/* Avatar pulse animation for loading states */
+@keyframes avatarPulse {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* Checkbox checkmark draw animation */
+@keyframes checkDraw {
+  from {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    opacity: 0;
+  }
+  to {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+/* Radio dot appear animation */
+@keyframes radioDotAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Switch fill-in animation */
+@keyframes fillIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ── Divider ───────────────────────────────── */
+.sketch-divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: visible;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ── Slider ────────────────────────────────── */
+.sketch-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.sketch-slider__label {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 0.25rem;
+}
+
+.sketch-slider__track-area {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  touch-action: none;
+  user-select: none;
+}
+
+.sketch-slider__native {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 20;
+  margin: 0;
+}
+
+.sketch-slider__native:disabled {
+  cursor: not-allowed;
+}
+
+/* ── Textarea ──────────────────────────────── */
+/* ── Progress ─────────────────────────────── */
+
+.sketch-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.sketch-progress__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 4px;
+}
+
+.sketch-progress__label {
+  transform: rotate(-0.5deg);
+  display: inline-block;
+}
+
+.sketch-progress__bar {
+  position: relative;
+  width: 100%;
+}
+
+.sketch-progress__svg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: visible;
+  filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.08))
+    drop-shadow(3px 4px 6px rgba(0, 0, 0, 0.03));
+}
+
+/* ── Textarea ─────────────────────────────── */
+
+.sketch-textarea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.sketch-textarea__label {
+  margin-left: 4px;
+  transform: rotate(-0.5deg);
+  display: inline-block;
+}
+
+.sketch-textarea__wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.sketch-textarea__svg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 0;
+}
+
+.sketch-textarea__field {
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  z-index: 1;
+}
+
+/* ── Skeleton ─────────────────────────────── */
+
+.sketch-skeleton__svg {
+  overflow: visible;
+  filter: drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.04));
+}
+
+.sketch-skeleton-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sketch-skeleton-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.sketch-skeleton-card__avatar-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* ── Tooltip ──────────────────────────────── */
+
+.sketch-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.sketch-tooltip__sizer {
+  position: absolute;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.sketch-tooltip__bubble {
+  position: absolute;
+  z-index: 50;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  filter: drop-shadow(2px 3px 0px rgba(0, 0, 0, 0.1))
+    drop-shadow(3px 5px 8px rgba(0, 0, 0, 0.06));
+}
+
+.sketch-tooltip__svg {
+  display: block;
+  overflow: visible;
+}
+
+.sketch-tooltip__text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ── Spinner ──────────────────────────────── */
+
+.sketch-spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sketch-spinner__svg {
+  overflow: visible;
+}
+
+/* Circle: smooth rotation */
+.sketch-spinner--circle .sketch-spinner__svg {
+  animation: sketch-spin linear infinite;
+}
+
+/* Spiral: slow rotation on SVG + draw-on / draw-off on stroke */
+.sketch-spinner__svg--spiral {
+  animation: sketch-spin linear infinite;
+}
+
+.sketch-spinner__spiral-stroke {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: sketch-spiral-draw ease-in-out infinite alternate;
+}
+
+/* Hourglass: flip with pauses */
+.sketch-spinner__svg--hourglass {
+  animation: sketch-spin-flip ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Sand stream falling animation */
+.sketch-spinner__sand {
+  animation: sketch-sand-fall 0.6s linear infinite;
+}
+
+/* Dots: scale pulse with stagger */
+.sketch-spinner__dot {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: sketch-dot-pulse ease-in-out infinite;
+}
+
+/* ── Spinner keyframes ────────────────────── */
+
+@keyframes sketch-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sketch-spin-flip {
+  0%,
+  15% {
+    transform: rotate(0deg);
+  }
+  42%,
+  58% {
+    transform: rotate(180deg);
+  }
+  85%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sketch-spiral-draw {
+  from {
+    stroke-dashoffset: 300;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes sketch-dot-pulse {
+  0%,
+  80%,
+  100% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+  40% {
+    transform: scale(1.35);
+    opacity: 0.9;
+  }
+}
+
+@keyframes sketch-sand-fall {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -10;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .sketch-spinner .sketch-spinner__svg,
+  .sketch-spinner__dot,
+  .sketch-spinner__sand,
+  .sketch-spinner__spiral-stroke {
+    animation-duration: 4s !important;
+  }
+}
+
+/* ── Sketch Modal ────────────────────────────────────── */
+
+.sketch-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: sketch-modal-backdrop-in 0.3s ease-out;
+}
+
+.sketch-modal-backdrop__overlay {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(2px);
+}
+
+.sketch-modal {
+  position: relative;
+  max-height: 85vh;
+  animation: sketch-modal-bounce-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  outline: none;
+}
+
+.sketch-modal__svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.sketch-modal__content {
+  position: relative;
+  padding: 40px 32px 24px;
+  max-height: 85vh;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sketch-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  outline: none;
+  z-index: 1;
+}
+
+.sketch-modal__close:hover {
+  transform: rotate(90deg) scale(1.1);
+}
+
+.sketch-modal__close:focus-visible {
+  outline: 2px dashed currentColor;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.sketch-modal__title {
+  margin: 0 40px 20px 0;
+  width: 100%;
+}
+
+.sketch-modal__body {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  line-height: 1.6;
+}
+
+.sketch-modal__footer {
+  padding-top: 16px;
+  border-top: 1px dashed #d0c9bb;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* ── Modal keyframes ─────────────────────────────────── */
+
+@keyframes sketch-modal-backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sketch-modal-bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px) rotate(-2deg);
+  }
+  50% {
+    transform: scale(1.03) translateY(5px) rotate(0.5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0) rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sketch-modal-backdrop {
+    animation-duration: 0.01s !important;
+  }
+  .sketch-modal {
+    animation-duration: 0.01s !important;
+  }
+}
+
+/* ────────────────────────────────────────────────────────── */
+/*  Card                                                      */
+/* ────────────────────────────────────────────────────────── */
+
+.sketch-card {
+  position: relative;
+}
+
+.sketch-card__svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.sketch-card__content {
+  position: relative;
+  padding: 40px 32px 24px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
